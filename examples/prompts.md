@@ -1,83 +1,56 @@
 # Prompt Examples
 
-下面这些 prompt 可以直接复制到 Codex 里使用。
-
-## 只做配图规划
+## 只做配圖規劃
 
 ```text
-Use $ian-xiaohei-illustrations 先不要生图。
-请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：
-- 放在哪个段落后
-- 图的主题
+Use $doctor-beagle-illustrations to 先不要生圖。
+請分析下面這篇文章哪裡值得配圖，輸出 5 張左右的 shot list。
+每張圖寫清楚：
+- 放在哪個段落後
+- 圖的主題
 - 核心意思
-- 结构类型
-- 小黑在图里做什么
-- 建议元素
-- 建议中文标注词
+- 結構類型
+- Doctor Beagle 在做什麼
+- 建議元素
+- 建議短標註
 
-<粘贴文章>
+<貼上文章>
 ```
 
-## 文章正文配图
+## 直接生成文章正文配圖
 
 ```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
-要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
-每张图只讲一个核心结构，不要做 PPT 信息图，不要可爱卡通。
+Use $doctor-beagle-illustrations to 把下面這篇文章生成 4 張米格魯手繪正文配圖。
+要求：16:9 橫版、純白背景、黑色手繪線稿、少量紅橙藍繁中手寫批註。
+每張圖只講一個核心結構，不要做 PPT 資訊圖，不要可愛寵物貼紙。
 
-<粘贴文章>
+<貼上文章>
 ```
 
-## 长文配图策略
+## Research Paper Illustration
 
 ```text
-Use $ian-xiaohei-illustrations 给这篇长文做配图策略。
-不要平均配图，只挑认知锚点：核心判断、输入输出闭环、前后对比、常见坑、承接路径。
-默认 6-8 张，先输出 shot list，不要生成图片。
+Use $doctor-beagle-illustrations to create 4 sparse body illustrations for this research paper.
+Use English labels only. Keep Doctor Beagle consistent with the bundled reference sheets.
 
-<粘贴文章>
+<paste paper abstract or notes>
 ```
 
-## 单个观点生成一张图
+## 單一概念
 
 ```text
-Use $ian-xiaohei-illustrations 为这个观点生成一张 16:9 正文配图：
+Use $doctor-beagle-illustrations to 為這個觀點生成一張 16:9 正文配圖：
 
-信任不是喊出来的，而是一块证据一块证据铺过去。
+「少量標註不是省成本而已，而是讓模型能跨資料集移動。」
 
-画面要怪诞但清爽，小黑必须承担核心动作。
-中文标注最多 5 个，短一点。
+畫面要怪但清爽。Doctor Beagle 必須做核心動作。
 ```
 
-## 工作流主题
+## 改圖：去掉標題
 
 ```text
-Use $ian-xiaohei-illustrations 为“把一条原始素材加工成流量、信任、转化三种内容”生成一张图。
-不要画正式流程图，不要复刻一鱼多吃旧案例。
-请重新发明一个新的低科技隐喻，让小黑参与核心动作。
-```
-
-## 改图：去掉标题
-
-```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图。
-去掉左上角的“Workflow / 流程图”标题和下划线，其他内容保持不变。
+Use $doctor-beagle-illustrations to 幫我編輯這張圖。
+去掉左上角的「Workflow / 系統圖」標題和底線，其他內容保持不變。
 不要新增任何文字或物件。
 ```
 
-## 改图：增强小黑参与感
-
-```text
-Use $ian-xiaohei-illustrations 这张图方向对，但小黑有点像装饰。
-请保持核心意思不变，重生成一版：让小黑成为真正推动结构运转的人。
-画面更怪一点，但仍然纯白、清爽、少字。
-```
-
-## 生成一组风格样片
-
-```text
-Use $ian-xiaohei-illustrations 输出 5 个不同主题的小黑正文配图效果。
-主题分别覆盖：信息过载、产品验证、内容复利、一人公司、信任建立。
-每张单独生成，不要拼成一张。
-```

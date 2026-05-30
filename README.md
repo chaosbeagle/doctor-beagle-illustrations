@@ -1,284 +1,178 @@
-# Ian Xiaohei Illustrations
+# Doctor Beagle Illustrations
 
-> 把中文文章里的判断、流程、状态和隐喻，变成一张张白底、手绘、怪诞但清爽的正文配图。
+> 繁中/英文文章的米格魯手繪正文配圖生成 Skill。
 >
-> 16:9 横版 | 小黑 IP | 纯白手绘 | 少量红橙蓝中文批注 | Codex Skill
+> 16:9 橫版 | 純白手繪 | Doctor Beagle IP | 少量紅橙藍批註 | Codex Skill
 
 ---
 
-## 这个仓库是什么
+## What This Is
 
-Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中文文章、帖子、博客、Notion 文档和方法论内容生成正文配图。
+Doctor Beagle Illustrations is a Codex Skill for turning article ideas, workflows, conceptual structures, and research-paper claims into clean, strange, hand-drawn body illustrations.
 
-它不是通用插画 prompt，也不是 PPT 信息图模板。它的核心目标是：先理解文章里的认知锚点，再把其中一个判断、流程、结构、状态或隐喻，变成一张有记忆点的 16:9 手绘解释图。
+It is designed for Traditional Chinese and English writing. The recurring visual IP is **Doctor Beagle**: a compact short-legged beagle with floppy tan ears, tiny black dot eyes, a black oval nose, white muzzle and belly, tan patches, and a serious deadpan working attitude.
 
-默认视觉 IP 是“小黑”：一个黑色实心、白点眼、细腿、空表情的小角色。小黑不是吉祥物，不是贴纸，也不是站在角落里的装饰物，而是正在认真参与系统运转的荒诞工作者。
-
-一句话：**让 AI 不只是“配一张图”，而是把文章里的一个关键认知动作画出来。**
+The goal is not to make a polished mascot, PPT infographic, or cute pet sticker. The goal is to make one sparse visual metaphor that helps the reader understand a key idea.
 
 ---
 
-## 适合谁用
+## Attribution
 
-特别适合：
+This project is adapted from:
 
-- 写中文文章，需要正文配图和文章插图的人
-- 做知识型内容、方法论内容、AI 工作流内容的人
-- 想把抽象判断画成具体隐喻的人
-- 想要一种比 PPT 信息图更轻、更怪、更有个人识别度的配图风格的人
-- 用 Codex 做内容生产，希望稳定复用一套视觉语言的人
+[Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) by Ian / [helloianneo](https://github.com/helloianneo)
 
-不适合：
+The original project is licensed under the MIT License.
 
-- 想要商业插画、品牌 KV 或精致扁平插画的人
-- 想要传统 PPT 信息图、复杂架构图或流程图的人
-- 想要儿童卡通、可爱 IP、表情包风格的人
-- 想把大量正文、长段解释或完整课程页塞进一张图里的人
-- 需要严格可编辑矢量源文件的人
+This derivative keeps the core article-illustration workflow and sparse hand-drawn visual logic, while changing:
 
----
+- the recurring character from Xiaohei to Doctor Beagle
+- the default language rules to Traditional Chinese / English
+- the bundled visual anchors
+- the reference prompts and QA rules for beagle character consistency
 
-## 它会产出什么
-
-默认输出：
-
-- 16:9 横版正文配图
-- 一篇文章的 4-8 张 shot list
-- 每张图的主题、核心意思、结构类型、小黑动作和中文标注建议
-- 最终 PNG 图片，保存到 workspace 的 `assets/<article-slug>-illustrations/`
-
-默认不输出：
-
-- PPTX / PDF / Keynote
-- SVG / HTML / Canvas 可编辑图
-- 商业海报或封面 KV
-- 大段文字型信息图
+See [NOTICE.md](NOTICE.md) for attribution details.
 
 ---
 
-## 视觉风格
+## Install
 
-这个 skill 默认使用 Ian 的“小黑怪诞正文配图”风格：
-
-- 纯白背景，不要纸纹、米色、阴影、渐变
-- 黑色手绘线稿，细线，轻微抖动
-- 大量留白，主体只占画面约 40%-60%
-- 少量红色、橙色、蓝色中文手写批注
-- 一张图只表达一个核心动作、结构、状态或隐喻
-- 小黑必须参与核心动作，不能只是装饰
-- 怪诞、有创意、清爽，但不幼稚、不卖萌
-
----
-
-## 示例效果
-
-### 两个断点
-
-![两个断点](examples/images/01-two-breakpoints.png)
-
-### 按目的分拣
-
-![按目的分拣](examples/images/02-sort-by-purpose.png)
-
-### 一鱼多吃
-
-![一鱼多吃](examples/images/03-one-fish-many-uses.png)
-
-### 承接路径
-
-![承接路径](examples/images/04-handoff-path.png)
-
-### 信息井
-
-![信息井](examples/images/05-information-well.png)
-
-### 想法压机
-
-![想法压机](examples/images/06-idea-press.png)
-
-### 内容发酵
-
-![内容发酵](examples/images/07-content-fermentation.png)
-
-### 信任桥
-
-![信任桥](examples/images/08-trust-bridge.png)
-
-这些图片是风格校准样例，不是构图模板。使用时应该从当前文章重新发明隐喻，不要照抄旧案例的物件和构图。
-
----
-
-## 安装
-
-克隆仓库：
+Install the skill with an Agent Skills compatible installer:
 
 ```bash
-git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
-cd ian-xiaohei-illustrations
+npx skills add https://github.com/chaosbeagle/doctor-beagle-illustrations --skill "doctor-beagle-illustrations"
 ```
 
-复制 skill 到 Codex skills 目录：
+Or copy the skill folder manually:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R ./doctor-beagle-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-安装后，在 Codex 里使用：
-
-```text
-Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。
-```
+Restart Codex after installing.
 
 ---
 
-## 怎么用
+## Usage
 
-### 只做配图规划
-
-```text
-Use $ian-xiaohei-illustrations 先不要生图。
-请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：放在哪段后、主题、核心意思、结构类型、小黑在做什么、建议中文标注词。
-
-<粘贴文章>
-```
-
-### 直接生成正文配图
+### Generate Body Illustrations
 
 ```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
-要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
+Use $doctor-beagle-illustrations to 為這篇文章設計並生成 4 張米格魯手繪正文配圖。
 
-<粘贴文章>
+<貼上文章>
 ```
 
-### 为单个概念生成一张图
+### Plan a Shot List Only
 
 ```text
-Use $ian-xiaohei-illustrations 为“信任不是喊出来的，而是一块证据一块证据铺过去”生成一张正文配图。
-画面要怪诞但清爽，小黑必须承担核心动作。
+Use $doctor-beagle-illustrations to 先不要生圖。
+請分析這篇文章哪些段落值得配圖，輸出 5 張左右的 shot list。
+
+<貼上文章>
 ```
 
-### 去掉图里的标题或错误文字
+### Generate One Concept Image
 
 ```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流程图”标题，其他内容保持不变。
+Use $doctor-beagle-illustrations to 為「少量標註也能跨資料集轉移」生成一張 16:9 正文配圖。
+畫面要白底、手繪、少字，Doctor Beagle 必須做核心動作。
 ```
 
-更多示例见 [examples/prompts.md](examples/prompts.md)。
+More prompts: [examples/prompts.md](examples/prompts.md)
 
 ---
 
-## 工作流程
+## Visual Style
 
-这个 skill 的流程是：
+Default output:
 
-1. 读取文章、Markdown、Notion 内容、截图或用户给的主题
-2. 提炼核心观点、认知转折、流程结构和适合视觉化的段落
-3. 先输出 shot list：每张图只选一个认知锚点
-4. 为每张图选择结构类型：Workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜
-5. 重新发明一个低科技、怪诞但成立的物理隐喻
-6. 让小黑承担核心动作
-7. 每张图单独调用图像模型生成
-8. 按 QA checklist 检查：白底、留白、小黑动作、中文标注、非 PPT 感、非旧案例复刻
-9. 保存最终 PNG，并报告用途和路径
+- 16:9 horizontal article illustration
+- pure white background
+- minimalist black hand-drawn line art
+- compact Doctor Beagle as the core action subject
+- tan/brown beagle markings only on the character
+- sparse red/orange/blue handwritten notes
+- lots of empty white space
+- one image explains one idea
+
+Avoid:
+
+- PPT infographic
+- commercial vector illustration
+- realistic dog
+- pet sticker / mascot poster
+- dense system architecture
+- Simplified Chinese unless explicitly requested
+- top-left type titles such as "Workflow", "System Map", or "Roadmap"
 
 ---
 
-## 目录结构
+## Character Anchors
+
+The skill includes three Doctor Beagle reference sheets to reduce image drift:
+
+| Asset | Purpose |
+| --- | --- |
+| `doctor-beagle-illustrations/assets/reference/beagle-model-sheet.png` | body proportions and views |
+| `doctor-beagle-illustrations/assets/reference/beagle-action-poses.png` | working poses and action vocabulary |
+| `doctor-beagle-illustrations/assets/reference/beagle-detail-sheet.png` | head shape, ears, patch placement, palette |
+
+These are visual anchors for `image_gen`; they should not be copied as final article compositions.
+
+---
+
+## Examples
+
+Generated with Doctor Beagle Illustrations for the paper *A Foundation Model for Spatial Proteomics*:
+
+### KRONOS Pretraining
+
+![KRONOS pretraining](examples/images/01-pretraining-many-markers.png)
+
+### Segmentation-Free Patch Reading
+
+![Segmentation-free patches](examples/images/02-segmentation-free-patches.png)
+
+### Label-Efficient Transfer
+
+![Label-efficient transfer](examples/images/03-label-efficient-transfer.png)
+
+### Spatial Pattern Reverse Search
+
+![Reverse search](examples/images/04-reverse-search-tissue-patterns.png)
+
+---
+
+## Repository Structure
 
 ```text
 .
-├── README.md
-├── LICENSE
-├── NOTICE.md
-├── assets/
-│   └── ian-wechat-qr.jpg
+├── doctor-beagle-illustrations/
+│   ├── SKILL.md
+│   ├── agents/
+│   │   └── openai.yaml
+│   ├── assets/
+│   │   └── reference/
+│   └── references/
 ├── examples/
 │   ├── images/
-│   │   ├── 01-two-breakpoints.png
-│   │   ├── 02-sort-by-purpose.png
-│   │   └── ...
 │   └── prompts.md
-└── ian-xiaohei-illustrations/
-    ├── SKILL.md
-    ├── agents/
-    │   └── openai.yaml
-    ├── assets/
-    │   └── examples/
-    └── references/
-        ├── style-dna.md
-        ├── xiaohei-ip.md
-        ├── composition-patterns.md
-        ├── prompt-template.md
-        └── qa-checklist.md
+├── LICENSE
+├── NOTICE.md
+└── README.md
 ```
 
-真正需要安装到 Codex 的是子目录：
+The installable skill is:
 
 ```text
-ian-xiaohei-illustrations/
+doctor-beagle-illustrations/
 ```
-
-根目录的 README、LICENSE、NOTICE 和 examples 是 GitHub 分享文档。
-
----
-
-## 注意事项
-
-- 图片里的中文文字越短越稳定。
-- 每张图只讲一个核心结构，不要把文章做成说明书。
-- 小黑必须承担核心动作；如果去掉小黑画面仍然完全成立，说明小黑太装饰了。
-- 示例图只用于校准线条密度、留白、颜色克制和小黑参与方式，不要复刻构图。
-- AI 图像模型可能出现错字、幻觉标签、风格漂移或多余标题，生成后需要检查。
-- 如果中文错字严重，优先减少标注词并重生成。
-
----
-
-## 相关项目
-
-- [Ian Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt) — 中文手绘技术 PPT-style 页面图生成 Skill
-- [Awesome Claude Code Skills](https://github.com/helloianneo/awesome-claude-code-skills) — Claude Code Skills / Agents / Plugins 精选合集
-- [Obsidian + Claude AI Second Brain](https://github.com/helloianneo/obsidian-ai-second-brain) — Obsidian + Claude AI 个人知识库搭建指南
-
----
-
-## 关于作者
-
-**Ian (伊恩)** — 产品设计师 / 一人公司实践者 / AI Builder
-
-用 AI 团队打造一人公司。
-
-- GitHub: [helloianneo](https://github.com/helloianneo)
-- X/Twitter: [@ianneo_ai](https://x.com/ianneo_ai)
-- 网站: [ianneo.xyz](https://ianneo.xyz)
-- 微信: `ianneoxyz`
-- 邮箱: hello.neoc@gmail.com
-
----
-
-## 下一步
-
-如果你想继续看我在 AI 和一人公司方向的探索，可以看这两个入口：
-
-- **看见信号：AI 开眼日报**
-  持续筛选 AI 世界里和个人生意有关的产品、工具、工作流和内容机会。
-
-- **进入现场：Indie Builders Club**
-  一个一起推进项目的圈子。你可以带着想法、页面、内容、课程、服务或半成品进来，一起看、一起改、一起往前推。圈子里也包含 AI × 一人公司知识库，工具、案例、模板和工作流会持续更新。
-
-如果只是想先观察，可以关注我的 [X/Twitter](https://x.com/ianneo_ai)。
-如果想加入 Indie Builders Club，加微信：`ianneoxyz`，备注「OPC」。
-
-<p>
-  <img src="assets/ian-wechat-qr.jpg" alt="Ian 微信二维码" width="120">
-</p>
-
-不方便扫码也可以搜索微信：`ianneoxyz`。
 
 ---
 
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
