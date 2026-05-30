@@ -36,6 +36,71 @@ Use English labels only. Keep Doctor Beagle consistent with the bundled referenc
 <paste paper abstract or notes>
 ```
 
+## English Shot List
+
+```text
+Use $doctor-beagle-illustrations to plan a shot list for this English article.
+Do not generate images yet.
+
+For each image, write:
+- where it should appear in the article
+- the theme
+- the single core idea
+- the structure type
+- what Doctor Beagle is doing
+- the key visual elements
+- 3 to 6 short English handwritten labels
+
+<paste article>
+```
+
+## English Research Paper Set
+
+```text
+Use $doctor-beagle-illustrations to create 4 standalone 16:9 body illustrations for this research paper.
+
+Use English handwritten labels only.
+Keep the background pure white.
+Use sparse black hand-drawn line art.
+Use orange only for the main path or motion, red only for warnings or hard cases, and blue only for secondary notes.
+Doctor Beagle must perform the core conceptual action in every image.
+Avoid PPT infographics, dense architecture diagrams, cute mascot posters, and top-left titles.
+
+Suggested themes:
+1. the paper's main interface or benchmark setup
+2. the main set of tasks or data types
+3. the key scoring or evaluation logic
+4. the most important result, limitation, or comparison
+
+<paste paper abstract, notes, or PDF summary>
+```
+
+## English Single Concept
+
+```text
+Use $doctor-beagle-illustrations to generate one 16:9 article illustration for this idea:
+
+"A benchmark is useful only when many different generators can be judged through the same small interface."
+
+Use English labels only.
+Doctor Beagle should operate the central mechanism, not stand beside it.
+Keep the image sparse, white, hand-drawn, and slightly strange.
+```
+
+## PCG Benchmark Example
+
+```text
+Use $doctor-beagle-illustrations to create 4 sparse body illustrations for the paper
+"The Procedural Content Generation Benchmark: An Open-source Testbed for Generative Challenges in Games".
+
+Use English labels only.
+Cover these four ideas:
+1. a generator plugs game-content artifacts into one shared benchmark interface
+2. the benchmark contains 12 heterogeneous PCG problems
+3. generated artifacts are evaluated for quality, controllability, and diversity
+4. Random, ES, and GA baselines reveal easy tasks and hard large-level problems
+```
+
 ## 單一概念
 
 ```text
@@ -53,4 +118,3 @@ Use $doctor-beagle-illustrations to 幫我編輯這張圖。
 去掉左上角的「Workflow / 系統圖」標題和底線，其他內容保持不變。
 不要新增任何文字或物件。
 ```
-

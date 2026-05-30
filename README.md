@@ -84,6 +84,32 @@ More prompts: [examples/prompts.md](examples/prompts.md)
 
 ---
 
+## English Quick Start
+
+Use English when the source article is English or when the generated image should contain English handwritten labels.
+
+```text
+Use $doctor-beagle-illustrations to create 4 sparse hand-drawn body illustrations for this research paper.
+Use English handwritten labels only.
+Keep Doctor Beagle as the active operator in each visual metaphor, not as a decorative mascot.
+
+<paste paper abstract, notes, or PDF summary>
+```
+
+For planning before generation:
+
+```text
+Use $doctor-beagle-illustrations to plan an illustration shot list for this article.
+Do not generate images yet.
+For each proposed image, include placement, core idea, structure type, Doctor Beagle action, visual elements, and short English labels.
+
+<paste article>
+```
+
+The skill works well for research papers, product essays, technical explainers, workflows, benchmark descriptions, and conceptual comparisons where one image should explain one core idea.
+
+---
+
 ## Visual Style
 
 Default output:
@@ -143,6 +169,32 @@ Generated with Doctor Beagle Illustrations for the paper *A Foundation Model for
 
 ![Reverse search](examples/images/04-reverse-search-tissue-patterns.png)
 
+Generated with Doctor Beagle Illustrations for the paper *The Procedural Content Generation Benchmark: An Open-source Testbed for Generative Challenges in Games*:
+
+### Benchmark Interface
+
+One generator plugs different game-content cards into a shared benchmark interface, then receives quality, diversity, and controllability score tags.
+
+![PCG benchmark interface](examples/images/05-pcg-benchmark-interface.png)
+
+### Twelve Game Problems
+
+The benchmark acts like an expandable drawer of heterogeneous game-generation tasks: rules, levels, word games, structures, and bullet patterns.
+
+![PCG twelve game problems](examples/images/06-pcg-twelve-game-problems.png)
+
+### Quality, Control, Diversity
+
+A generated artifact is dragged through three checks: whether it is feasible, whether it matches the control parameter, and whether it is distinct from the population.
+
+![PCG quality control diversity](examples/images/07-pcg-quality-control-diversity.png)
+
+### Baseline Results and Hard Problems
+
+Random, ES, and GA baselines climb at different speeds, while large levels and low-locality tasks remain hard.
+
+![PCG baseline hard problems](examples/images/08-pcg-baseline-hard-problems.png)
+
 ---
 
 ## Repository Structure
@@ -175,4 +227,3 @@ doctor-beagle-illustrations/
 ## License
 
 MIT License. See [LICENSE](LICENSE).
-
